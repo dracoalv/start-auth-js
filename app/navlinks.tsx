@@ -20,7 +20,7 @@ export function Navlinks() {
           <li key={link.name}>
             <Link 
               href={link.href} 
-              className={`${isActive ? 'text-red-500' : 'text-slate-800'}`}
+              className={`${isActive ? 'text-violet-500' : 'text-gray-600'}`}
             >
               {link.name}
             </Link>

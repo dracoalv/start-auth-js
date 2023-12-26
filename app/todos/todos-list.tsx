@@ -1,3 +1,4 @@
+import { CheckTodo } from "./check-todo"
 import { DeleteTodo } from "./delete-todo"
 
 const todos = [
@@ -20,12 +21,11 @@ const todos = [
 
 export function TodosList() {
   return (
-    <ul className="w-80 min-h-80 p-8 border rounded-md bg-gray-50">
+    <ul className="w-80 min-h-80 p-8 border rounded-md bg-violet-50">
       {todos.map(todo => (
         <li key={todo.id} className="mb-1">
           <label className="flex items-center gap-2">
-            <input type="checkbox" />
-            <span>{todo.todo}</span>
+            <CheckTodo>{todo.todo}</CheckTodo>
             <DeleteTodo id={todo.id}/>
           </label>
         </li>
